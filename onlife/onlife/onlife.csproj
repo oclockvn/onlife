@@ -202,14 +202,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\styles\lumx.css" />
+    <Content Include="Content\styles\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -219,8 +218,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\styles\styles.scss" />
+    <Content Include="Content\styles\_core\_color.scss" />
+    <Content Include="Content\styles\_core\_helper.scss" />
+    <Content Include="Content\styles\_core\_size.scss" />
+    <Content Include="Content\styles\_core\_index.scss" />
+    <Content Include="Content\styles\_modules\_index.scss" />
+    <Content Include="Content\styles\_partials\_index.scss" />
+    <Content Include="Content\styles\_partials\_layout.scss" />
+    <Content Include="Content\styles\_partials\_header.scss" />
+    <Content Include="Content\styles\_partials\_footer.scss" />
+    <Content Include="Content\styles\styles.css.map" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
