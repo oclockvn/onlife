@@ -112,6 +112,12 @@
             }
         }
     }
+
+    @include breakpoint(sm) {
+        &.flex-mobile {
+            display: flex !important;
+        }
+    }
 }
 
 .menu {

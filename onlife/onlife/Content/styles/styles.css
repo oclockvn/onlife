@@ -140,6 +140,11 @@
           border-top: 1px solid rgba(0, 0, 0, 0.1); }
           .nav .menu li:last-child {
             border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
+  @media (min-width: 768px) {
+    .nav.flex-mobile {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important; } }
 
 .menu li {
   display: block; }
