@@ -1,2 +1,15 @@
 ﻿body {
+    background: url('../images/bg.png') no-repeat;
+    background-size: auto;
+    background-position: top 5% center;
+
+    @include breakpoint(xs) {
+        background-size: auto;
+        background-position: top 25% center;
+    }
+
+    /*@include breakpoint(sm) {
+        background-size: auto;
+        background-position: top 25% center;
+    }*/
 }

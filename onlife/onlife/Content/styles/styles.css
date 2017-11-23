@@ -28,12 +28,26 @@
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+body {
+  background: url("../images/bg.png") no-repeat;
+  background-size: auto;
+  background-position: top 5% center;
+  /*@include breakpoint(sm) {
+      background-size: auto;
+      background-position: top 25% center;
+  }*/ }
+  @media (max-width: 767px) {
+    body {
+      background-size: auto;
+      background-position: top 25% center; } }
+
 .header {
   padding: 8px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative; }
+  position: relative;
+  background: #fff; }
   .header a:hover {
     text-decoration: none; }
   .header .hamburger {
