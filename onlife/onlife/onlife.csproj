@@ -209,6 +209,7 @@
     <Content Include="Content\images\dark-blue-plan.png" />
     <Content Include="Content\images\dark-blue-speed-icon.png" />
     <Content Include="Content\images\dark-blue-topup.png" />
+    <Content Include="Content\images\menu-hamburger.png" />
     <Content Include="Content\images\onlife-logo.gif" />
     <Content Include="Content\images\onlife-logomark.png" />
     <Content Include="Content\images\purple-home-data.png" />

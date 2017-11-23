@@ -1,13 +1,34 @@
 ﻿.header {
     padding: 8px 16px;
     display: flex;
+    position: relative;
 
     a:hover {
         text-decoration: none;
     }
 
+    .hamburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $menu_mobile_height;
+        height: $menu_mobile_height;
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+        img {
+            max-width: 32px;
+        }
+    }
+
     @include breakpoint(xs) {
+        padding: 0;
         flex-direction: column;
+
+        .hamburger {
+            display: flex;
+        }
     }
 }
 
@@ -70,7 +91,8 @@
     }
 
     @include breakpoint(xs) {
-        border: 1px solid $border_menu;
+        // border: 1px solid $border_menu;
+        display: none;
 
         .menu {
             flex-direction: column;
@@ -82,9 +104,10 @@
                 flex: 1;
                 display: block;
                 width: 100%;
+                border-top: 1px solid $border_menu;
 
-                + li {
-                    border-top: 1px solid $border_menu;
+                &:last-child {
+                    border-bottom: 1px solid $border_menu;
                 }
             }
         }
