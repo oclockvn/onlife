@@ -1,2 +1,127 @@
-﻿body {
+﻿.header {
+    padding: 8px 16px;
+    display: flex;
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+    }
+}
+
+.brand {
+    color: $brand_color;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    .logo {
+        max-width: 48px;
+        margin-right: 8px;
+    }
+
+    .brand__name {
+        font-weight: 900;
+        color: $main_color;
+        position: relative;
+
+        &:after {
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: $main_color;
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            right: -6px;
+            top: calc(1em - 3px);
+        }
+    }
+
+    @include breakpoint(xs) {
+        padding: 8px;
+
+        .brand__name {
+            display: none;
+        }
+
+        .logo {
+            max-width: 32px;
+        }
+    }
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    .menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    @include breakpoint(xs) {
+        border: 1px solid $border_menu;
+
+        .menu {
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            li {
+                flex: 1;
+                display: block;
+                width: 100%;
+
+                + li {
+                    border-top: 1px solid $border_menu;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    li {
+        display: block;
+    }
+
+    a {
+        display: block;
+        padding: 8px 48px;
+        text-decoration: none;
+        color: $main_color;
+
+        &:hover {
+            color: $menu_link_hover;
+        }
+    }
+
+    .menu__chat {
+        background-image: url(../images/chat.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center 50%;
+        height: 100%;
+        padding: 16px 16px 16px 32px;
+    }
+
+    @include breakpoint(xs) {
+        a, .menu__chat {
+            text-align: center;
+            height: $menu_mobile_height;
+            line-height: $menu_mobile_height;
+            padding: 0;
+        }
+    }
 }

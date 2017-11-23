@@ -204,6 +204,23 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\chat.png" />
+    <Content Include="Content\images\dar-blue-plan-icon-3.png" />
+    <Content Include="Content\images\dark-blue-plan.png" />
+    <Content Include="Content\images\dark-blue-speed-icon.png" />
+    <Content Include="Content\images\dark-blue-topup.png" />
+    <Content Include="Content\images\onlife-logo.gif" />
+    <Content Include="Content\images\onlife-logomark.png" />
+    <Content Include="Content\images\purple-home-data.png" />
+    <Content Include="Content\images\purple-home-talk-icon.png" />
+    <Content Include="Content\images\purple-mobile-data.png" />
+    <Content Include="Content\images\purple-mobile-talk-icon.png" />
+    <Content Include="Content\images\purple-summary-icon.png" />
+    <Content Include="Content\images\white-calculator.png" />
+    <Content Include="Content\images\white-home-data.png" />
+    <Content Include="Content\images\white-home-talk-icon.png" />
+    <Content Include="Content\images\white-mobile-data.png" />
+    <Content Include="Content\images\white-mobile-talk.png" />
     <Content Include="Content\styles\lumx.css" />
     <Content Include="Content\styles\styles.css" />
     <Content Include="favicon.ico" />
@@ -229,6 +246,7 @@
     <Content Include="Content\styles\_partials\_header.scss" />
     <Content Include="Content\styles\_partials\_footer.scss" />
     <Content Include="Content\styles\styles.css.map" />
+    <Content Include="Content\styles\_core\_mixin.scss" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -282,6 +300,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,2 +1,23 @@
-﻿body {
+﻿.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.v-center {
+    align-items: center;
+}
+
+.h-center {
+    justify-content: center;
+}
+
+.h-start {
+    justify-content: flex-start;
+}
+
+.h-end {
+    justify-content: flex-end;
 }
