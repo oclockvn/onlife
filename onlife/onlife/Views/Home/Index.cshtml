@@ -43,7 +43,7 @@
                     <div class="item__icon">
                         <img src="~/Content/images/purple-home-data.png" />
                     </div>
-                    <div class="item__content bold">home data + talk</div>
+                    <div class="item__content bold">home data <span data-bind="if: includeMobileTalk">+ talk</span></div>
                     <div class="item__price" data-bind="if: id() > 0">$80</div>
                     <div class="item__dropdown" data-bind="if: id() > 0, click: $root.toggleBundle">
                         <span class="glyphicon glyphicon-menu-down"></span>
@@ -60,8 +60,13 @@
                         <span class="image">
                             <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
                         </span>
-                        <div class="text">Add mobile talk</div>
-                        <div class="action"></div>
+                        <div class="text flex-container v-center" data-bind="click: toggleMobileTalk">
+                            <span class="flex-item">Add mobile talk</span>
+                            <!-- ko if: includeMobileTalk -->
+                            <img src="~/Content/images/checked.png" />
+                            <!-- /ko -->
+                        </div>
+                        <!--<div class="action"></div>-->
                     </div>
                     <!-- //mobile talk -->
 

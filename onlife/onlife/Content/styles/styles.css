@@ -549,5 +549,11 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     text-decoration: none; }
+  .detail.detail--talk {
+    cursor: pointer;
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+    .detail.detail--talk:hover {
+      color: #4caf50; }
 
 /*# sourceMappingURL=styles.css.map */

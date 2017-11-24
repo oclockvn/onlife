@@ -250,4 +250,13 @@
         justify-content: center;
         text-decoration: none;
     }
+
+    &.detail--talk {
+        cursor: pointer;
+        transition: .3s ease;
+
+        &:hover {
+            color: $green_color;
+        }
+    }
 }
