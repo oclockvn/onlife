@@ -12,6 +12,15 @@
         font-weight: 600;
         font-size: 1.3em;
     }
+
+    @include breakpoint(xs) {
+        flex-direction: column;
+        
+        .bundle {
+            margin: 0 !important;
+            flex: 1;
+        }
+    }
 }
 
 .bundles img {
@@ -54,6 +63,14 @@
     &.bundle__build {
         .bundle__content {
             background: $bundle_header_bgc;
+        }
+    }
+
+    @include breakpoint(xs) {
+        .bundle__header {
+            .bundle__header-text {
+                min-width: initial;
+            }
         }
     }
 }
@@ -115,6 +132,14 @@
                 margin-bottom: 4px;
                 font-weight: 400;
             }
+        }
+    }
+}
+
+.bundle__summary {
+    @include breakpoint(xs) {
+        .bundle__header {
+            margin-top: 8px;
         }
     }
 }
