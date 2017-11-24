@@ -40,8 +40,12 @@
         <div class="bundle__content ph+" data-bind="foreach: bundles">
             <div class="item-container" data-bind="css: { expanded: expanded }">
                 <div class="item flex-container v-center">
-                    <div class="item__icon">
-                        <img src="~/Content/images/purple-home-data.png" />
+                    <div class="item__icon" data-bind="css: { 'flex-container': includeMobileTalk, 'v-center': includeMobileTalk }">
+                        <img src="@Url.Content("~/Content/images/purple-home-data.png")" />
+                        <!-- ko if: includeMobileTalk -->
+                        <span class="mh-">+</span>
+                        <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
+                        <!-- /ko -->
                     </div>
                     <div class="item__content bold"><span data-bind="text: name"></span> <span data-bind="if: includeMobileTalk">+ talk</span></div>
                     <div class="item__price" data-bind="if: id() > 0">$80</div>

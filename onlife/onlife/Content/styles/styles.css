@@ -448,6 +448,11 @@ body {
     .bundle__content .item-container .item__icon {
       display: block;
       min-width: 40px; }
+      .bundle__content .item-container .item__icon.flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 8px; }
     .bundle__content .item-container .item__price {
       padding: 0 16px 0 0;
       color: #4caf50; }

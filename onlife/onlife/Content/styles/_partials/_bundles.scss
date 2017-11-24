@@ -114,6 +114,11 @@
         .item__icon {
             display: block;
             min-width: 40px;
+
+            &.flex-container {
+                display: flex;
+                margin-right: 8px;
+            }
         }
 
         .item__price {

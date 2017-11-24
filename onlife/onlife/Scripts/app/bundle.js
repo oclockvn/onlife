@@ -13,7 +13,7 @@ function Bundle(type) {
     this.expanded = ko.observable(false);
     this.price = ko.observable(0);
     this.options = ko.observableArray([
-        new BundleOption("data", "purple-mobile-talk-icon.png", [new OptionValues('7gb', 7, false), new OptionValues('10gb', 10, false)]),
+        new BundleOption("data", "purple-mobile-data.png", [new OptionValues('7gb', 7, false), new OptionValues('10gb', 10, false)]),
         new BundleOption("topup", "dollar.png", [new OptionValues('auto', 7, false), new OptionValues('manual', 10, false)]),
         new BundleOption("contract", "contract.png", [new OptionValues('12 months', 7, false), new OptionValues('monthly', 10, false)])
     ]);
