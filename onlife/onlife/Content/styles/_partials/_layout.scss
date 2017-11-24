@@ -1,8 +1,16 @@
 ﻿html {
     background: none;
+    height: auto;
+    min-height: 100%;
+
+    @include breakpoint(sm) {
+        height: 100%;
+    }
 }
 
 body {
+    height: 100%;
+    min-height: 100%;
     background: #eee url('../images/bg.png') no-repeat;
     background-size: auto;
     background-position: top 5% center;
@@ -13,12 +21,10 @@ body {
         background-size: auto;
         background-position: top 25% center;
     }
-
     /*@include breakpoint(sm) {
         background-size: auto;
         background-position: top 25% center;
     }*/
-
     main {
         flex: 1;
     }

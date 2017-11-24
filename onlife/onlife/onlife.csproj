@@ -210,6 +210,7 @@
     <Content Include="Content\images\dark-blue-plan.png" />
     <Content Include="Content\images\dark-blue-speed-icon.png" />
     <Content Include="Content\images\dark-blue-topup.png" />
+    <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\menu-hamburger.png" />
     <Content Include="Content\images\onlife-logo.gif" />
     <Content Include="Content\images\onlife-logomark.png" />
@@ -218,6 +219,7 @@
     <Content Include="Content\images\purple-mobile-data.png" />
     <Content Include="Content\images\purple-mobile-talk-icon.png" />
     <Content Include="Content\images\purple-summary-icon.png" />
+    <Content Include="Content\images\twitter.png" />
     <Content Include="Content\images\white-calculator.png" />
     <Content Include="Content\images\white-home-data.png" />
     <Content Include="Content\images\white-home-talk-icon.png" />
@@ -308,6 +310,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Home\_SummaryHeader.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
