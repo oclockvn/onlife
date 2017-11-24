@@ -251,6 +251,7 @@
     <Content Include="Content\styles\_core\_mixin.scss" />
     <Content Include="Content\styles\_partials\_intro.scss" />
     <Content Include="Content\styles\_partials\_bundles.scss" />
+    <Content Include="Content\styles\_modules\_button.scss" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -306,6 +307,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Home\_SummaryHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

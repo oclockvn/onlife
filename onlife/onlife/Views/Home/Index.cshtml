@@ -21,6 +21,11 @@
 </section>
 
 <section class="bundles">
+
+    <div class="bundle-mobile bundle">
+        @Html.Partial("_SummaryHeader")
+    </div>
+
     <div class="bundle bundle__build">
         <div class="bundle__header">           
             <span class="bundle-icon">
@@ -31,6 +36,7 @@
                 <div class="text-bot">select your options below</div>
             </div>
         </div>
+
         <div class="bundle__content ph+">
             @for (int i = 0; i < 3; i++)
             {
@@ -46,42 +52,20 @@
                 </div>
             }
         </div>
+
+        <div class="bundle__footer flex-container h-center p++">
+            <a href="#" class="button button--add-data">
+                <img src="~/Content/images/purple-mobile-data.png" />
+                <span>add another mobile data</span>
+            </a>
+        </div>
     </div>
     <!-- //bundle build -->
 
     <div class="bundle bundle__summary">
-        <div class="bundle__header bgc-bundle-header">
-            <span class="bundle-icon">
-                <img src="~/Content/images/purple-summary-icon.png" alt="build summary" />
-            </span>
-            <div class="bundle__header-text text-uppercase text-center flex-container">
-                
-                <div class="text-uppercase text-center">
-                    <span class="text-top">
-                        <i class="glyphicon glyphicon-usd"></i>
-                        <span>0</span>
-                    </span>
-                    <div class="text-bot">upfront</div>
-                </div>
+        
+        @Html.Partial("_SummaryHeader")
 
-                <div class="text-uppercase text-center">
-                    <span class="text-top">
-                        <i class="glyphicon glyphicon-usd"></i>
-                        <span>0</span>
-                    </span>
-                    <div class="text-bot">min pmo</div>
-                </div>
-
-                <div class="text-uppercase text-center">
-                    <span class="text-top">
-                        <i class="glyphicon glyphicon-usd"></i>
-                        <span>0</span>
-                    </span>
-                    <div class="text-bot">min 12 month</div>
-                </div>
-
-            </div>
-        </div>
         <div class="bundle__content">
 
             <header class="flex-container v-center bgc-light-300 p++ mb bold">
@@ -124,6 +108,13 @@
                 }
             </div>
 
+        </div>
+
+        <div class="bundle__footer flex-container h-center p++">
+            <a href="#" class="button button--signup">
+                <img src="~/Content/images/onlife-logomark.png" />
+                <span>sign me up to onlife</span>
+            </a>
         </div>
     </div>
     <!-- //bundle summary -->

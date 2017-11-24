@@ -13,18 +13,32 @@
         font-size: 1.3em;
     }
 
+    .bundle-mobile {
+        display: none;
+    }
+
+    img {
+        max-width: 24px;
+    }
+
     @include breakpoint(xs) {
         flex-direction: column;
+        padding: 0;
         
         .bundle {
             margin: 0 !important;
             flex: 1;
+
+            &.bundle-mobile {
+                display: block;
+                // margin-bottom: 8px !important;
+            }
+
+            &:not(.bundle-mobile) {
+                padding: 16px;
+            }
         }
     }
-}
-
-.bundles img {
-    max-width: 32px;
 }
 
 .bundle {
@@ -139,7 +153,8 @@
 .bundle__summary {
     @include breakpoint(xs) {
         .bundle__header {
-            margin-top: 8px;
+            // margin-top: 8px;
+            display: none;
         }
     }
 }
