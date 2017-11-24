@@ -88,46 +88,6 @@
 
                     <!-- /ko -->
 
-                    @*
-
-                    <div class="detail detail--data">
-                        <span class="image">
-                            <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
-                        </span>
-                        <div class="text">Data</div>
-                        <div class="action">
-                            <a href="#">7gb</a>
-                            <a href="#">10gb</a>
-                        </div>
-                    </div>
-                    <!-- //data -->
-
-                    <div class="detail detail--topup">
-                        <span class="image">
-                            <img src="@Url.Content("~/Content/images/dollar.png")" />
-                        </span>
-                        <div class="text">Topup</div>
-                        <div class="action">
-                            <a href="#">Auto</a>
-                            <a href="#">Manual</a>
-                        </div>
-                    </div>
-                    <!-- //topup -->
-
-                    <div class="detail detail--contract">
-                        <span class="image">
-                            <img src="@Url.Content("~/Content/images/contract.png")" />
-                        </span>
-                        <div class="text">Contract</div>
-                        <div class="action">
-                            <a href="#">12 Months</a>
-                            <a href="#">Monthly</a>
-                        </div>
-                    </div>
-                    <!-- //contract -->
-
-                    *@
-
                     <div class="detail detail--remove flex-container h-end v-center p0">
                         <a href="#" class="remove-detail" data-bind="click: $root.removeBundle">
                             <span class="glyphicon glyphicon-trash tc-red-500"></span>
@@ -159,26 +119,26 @@
                 <span class="text-uppercase">bundle summary</span>
             </header>
 
-            <div class="summary-container">
-                @for (int i = 0; i < 2; i++)
-                {
+            <div class="summary-container" data-bind="foreach: bundles">
+                <!-- ko if: id() > 0 -->
                     <div class="summary bgc-light-300">
                         <div class="summary__header flex-container v-center">
                             <span class="flex-container v-center mr+">
                                 <img src="~/Content/images/purple-home-data.png" />
-                                <i class="glyphicon glyphicon-plus"></i>
-                                <img src="~/Content/images/purple-home-talk-icon.png" />
+                                <!-- ko if: includeMobileTalk -->
+                                <span class="mh-">+</span>
+                                <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
+                                <!-- /ko -->
                             </span>
-                            <span class="bold text-uppercase">home data + talk</span>
+                            <span class="bold text-uppercase"><span data-bind="text: name"></span> <span data-bind="if: includeMobileTalk">+ talk</span></span>
                         </div>
+                        <!-- //header -->
+
                         <div class="summary__content flex-container">
                             <div class="flex-item">
                                 <h5 class="text-uppercase">details</h5>
-                                <ul>
-                                    <li>- 100BG data</li>
-                                    <li>- 50mbps</li>
-                                    <li>- Local, national &amp; mobile talk</li>
-                                    <li>- Monthly contract</li>
+                                <ul data-bind="foreach: selectedOptions">
+                                    <li>- <span data-bind="text: $data"></span></li>                                    
                                 </ul>
                             </div>
                             <div class="flex-item">
@@ -190,8 +150,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                }
+                        <!-- //details -->
+
+                    </div>           
+                <!-- /ko -->
             </div>
 
         </div>
