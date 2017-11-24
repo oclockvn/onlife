@@ -28,10 +28,26 @@
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+.tc-main {
+  color: #313994; }
+
+.bgc-main {
+  background-color: #313994; }
+
+html {
+  background: none; }
+
 body {
-  background: url("../images/bg.png") no-repeat;
+  background: #eee url("../images/bg.png") no-repeat;
   background-size: auto;
   background-position: top 5% center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /*@include breakpoint(sm) {
       background-size: auto;
       background-position: top 25% center;
@@ -40,6 +56,10 @@ body {
     body {
       background-size: auto;
       background-position: top 25% center; } }
+  body main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
 
 .header {
   padding: 8px 16px;
@@ -182,5 +202,77 @@ body {
     height: 50px;
     line-height: 50px;
     padding: 0; } }
+
+.sec--intro {
+  position: fixed;
+  width: 200px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: calc(50% - 200px); }
+  .sec--intro .sec__content {
+    margin-right: 16px;
+    font-size: 1.4em;
+    text-align: center; }
+    .sec--intro .sec__content .line {
+      border-top: 1px solid #313994;
+      margin: 8px; }
+    .sec--intro .sec__content .intro-top, .sec--intro .sec__content .intro-bot {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+  .sec--intro:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    z-index: -1;
+    left: -50%;
+    left: -200px; }
+  @media (max-width: 767px) {
+    .sec--intro {
+      display: none; } }
+
+.dot-circle {
+  width: 3px;
+  height: 3px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 1px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+/*.intro-top {
+    color: #313994;
+}
+
+.intro-top .dot-circle {
+    background-color: #313994;
+}
+
+.intro-bot {
+    color: #4caf50;
+}
+
+.intro-bot .dot-circle {
+    background-color: #4caf50;
+}*/
 
 /*# sourceMappingURL=styles.css.map */

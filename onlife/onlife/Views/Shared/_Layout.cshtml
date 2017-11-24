@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - OnLife</title>
     @Styles.Render("~/Content/css")
+    <link href="~/Content/styles/lumx.css" rel="stylesheet" />
     <link href="~/Content/styles/styles.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 
@@ -13,7 +14,9 @@
 
     @Html.Partial("_Header")
 
-    @RenderBody()
+    <main>
+        @RenderBody()
+    </main>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

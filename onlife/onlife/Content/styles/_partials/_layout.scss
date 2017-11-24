@@ -1,7 +1,13 @@
-﻿body {
-    background: url('../images/bg.png') no-repeat;
+﻿html {
+    background: none;
+}
+
+body {
+    background: #eee url('../images/bg.png') no-repeat;
     background-size: auto;
     background-position: top 5% center;
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint(xs) {
         background-size: auto;
@@ -12,4 +18,8 @@
         background-size: auto;
         background-position: top 25% center;
     }*/
+
+    main {
+        flex: 1;
+    }
 }

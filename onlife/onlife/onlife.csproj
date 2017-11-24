@@ -249,6 +249,7 @@
     <Content Include="Content\styles\_partials\_footer.scss" />
     <Content Include="Content\styles\styles.css.map" />
     <Content Include="Content\styles\_core\_mixin.scss" />
+    <Content Include="Content\styles\_partials\_intro.scss" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\bootstrap.js" />
