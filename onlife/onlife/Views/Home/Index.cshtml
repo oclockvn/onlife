@@ -43,7 +43,7 @@
                     <div class="item__icon">
                         <img src="~/Content/images/purple-home-data.png" />
                     </div>
-                    <div class="item__content bold">home data <span data-bind="if: includeMobileTalk">+ talk</span></div>
+                    <div class="item__content bold"><span data-bind="text: name"></span> <span data-bind="if: includeMobileTalk">+ talk</span></div>
                     <div class="item__price" data-bind="if: id() > 0">$80</div>
                     <div class="item__dropdown" data-bind="if: id() > 0, click: $root.toggleBundle">
                         <span class="glyphicon glyphicon-menu-down"></span>

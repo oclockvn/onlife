@@ -4,7 +4,10 @@
 function Bundle(type) {
     var self = this;
 
-    this.name = ko.observable();
+    type = type || 2;
+    var name = type == 1 ? "home data" : "mobile data";
+
+    this.name = ko.observable(name);
 
     this.id = ko.observable(0);
     this.expanded = ko.observable(false);
@@ -65,7 +68,7 @@ function OptionValues(text, price, selected) {
 function ViewModel() {
     var self = this;
 
-    self.bundles = ko.observableArray([new Bundle(), new Bundle()]);
+    self.bundles = ko.observableArray([new Bundle(1), new Bundle(2)]);
 
     self.toggleBundle = function (bundle) {
         bundle.expanded(!bundle.expanded());
@@ -74,6 +77,16 @@ function ViewModel() {
     self.removeBundle = function (bundle) {
 
         self.bundles.remove(bundle);
+
+        // find a home bundle
+        var home = _.find(self.bundles(), function (b) {
+            return b.type() === 1;
+        });
+
+        // if there is no home bundle, add new one
+        if (!home) {
+            self.bundles.unshift(new Bundle(1));
+        }
 
         if (self.bundles().length < 2) {
 
