@@ -533,7 +533,8 @@ body {
         text-decoration: none; }
       .detail .action a.selected {
         border: 1px solid #4caf50;
-        color: #4caf50; }
+        color: #fff;
+        background: #4caf50; }
       .detail .action a + a {
         margin-left: 8px; }
   .detail .remove-detail {

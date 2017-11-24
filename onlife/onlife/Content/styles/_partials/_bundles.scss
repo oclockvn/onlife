@@ -233,7 +233,8 @@
 
             &.selected {
                 border: 1px solid $green_color;
-                color: $green_color;
+                color: #fff;
+                background: $green_color;
             }
 
             + a {

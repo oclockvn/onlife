@@ -10,9 +10,9 @@ function Bundle(type) {
     this.expanded = ko.observable(false);
     this.price = ko.observable(0);
     this.options = ko.observableArray([
-        new BundleOption("data", [new OptionValues('7gb', 7, false), new OptionValues('10gb', 10, false)]),
-        new BundleOption("topup", [new OptionValues('auto', 7, false), new OptionValues('manual', 10, false)]),
-        new BundleOption("contract", [new OptionValues('12 months', 7, false), new OptionValues('monthly', 10, false)])
+        new BundleOption("data", "purple-mobile-talk-icon.png", [new OptionValues('7gb', 7, false), new OptionValues('10gb', 10, false)]),
+        new BundleOption("topup", "dollar.png", [new OptionValues('auto', 7, false), new OptionValues('manual', 10, false)]),
+        new BundleOption("contract", "contract.png", [new OptionValues('12 months', 7, false), new OptionValues('monthly', 10, false)])
     ]);
     this.type = ko.observable(type || 2); // default is mobile
     this.includeMobileTalk = ko.observable(false);
@@ -30,12 +30,33 @@ function Bundle(type) {
     };
 }
 
-function BundleOption(name, options) {
+function BundleOption(name, icon, options) {
+
+    var self = this;
+
+    icon = icon || "";
+    icon = "/Content/images/" + icon;
     this.name = ko.observable(name || "");
+    this.icon = ko.observable(icon);
     this.options = ko.observableArray(options || []);
+    this.id = Number(_.uniqueId());
+
+    this.dataClass = ko.pureComputed(function () {
+        return "data--" + this.name();
+    }, this);
+
+    this.selectOption = function (option) {
+
+        _.forEach(self.options(), function (op) {
+            op.selected(false);
+        });
+
+        option.selected(true);
+    };
 }
 
 function OptionValues(text, price, selected) {
+    this.id = Number(_.uniqueId());
     this.text = ko.observable(text || "");
     this.price = ko.observable(price || "");
     this.selected = ko.observable(selected || false);
