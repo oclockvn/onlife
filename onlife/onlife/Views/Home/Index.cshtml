@@ -119,8 +119,9 @@
                 <span class="text-uppercase">bundle summary</span>
             </header>
 
-            <div class="summary-container" data-bind="foreach: bundles">
-                <!-- ko if: id() > 0 -->
+            <div class="scrollbar-chrome2">
+                <div class="summary-container scrollbar-chrome2" data-bind="foreach: bundles">
+                    <!-- ko if: id() > 0 -->
                     <div class="summary bgc-light-300">
                         <div class="summary__header flex-container v-center">
                             <span class="flex-container v-center mr+">
@@ -138,7 +139,7 @@
                             <div class="flex-item">
                                 <h5 class="text-uppercase">details</h5>
                                 <ul data-bind="foreach: selectedOptions">
-                                    <li>- <span data-bind="text: $data"></span></li>                                    
+                                    <li>- <span data-bind="text: $data"></span></li>
                                 </ul>
                             </div>
                             <div class="flex-item">
@@ -152,10 +153,10 @@
                         </div>
                         <!-- //details -->
 
-                    </div>           
-                <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
             </div>
-
         </div>
 
         <div class="bundle__footer flex-container h-center p++">

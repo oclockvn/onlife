@@ -24,4 +24,17 @@
 
 $(document).ready(function () {
     app._init();
+
+    $(".summary-container").slimScroll({
+        height: '400px',
+        size: '5px',
+        color: '#313994',
+        alwaysVisible: true,
+        railVisible: false,
+        railColor: '#111',
+        railOpacity: 0.3,
+        wheelStep: 10,
+        allowPageScroll: false,
+        disableFadeOut: false
+    });
 });

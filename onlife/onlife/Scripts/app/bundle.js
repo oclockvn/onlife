@@ -126,6 +126,7 @@ function ViewModel() {
 
 (function () {
     var vm = new ViewModel();
+
     vm.realBundles = ko.pureComputed(function () {
         var arr = [];
 

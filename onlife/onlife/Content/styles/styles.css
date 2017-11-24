@@ -475,22 +475,25 @@ body {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
 
-.summary-container .summary {
-  padding: 32px; }
-  .summary-container .summary + .summary {
-    margin-top: 8px; }
-  .summary-container .summary ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0.85em; }
-  .summary-container .summary .summary__header {
-    margin-bottom: 16px; }
-    .summary-container .summary .summary__header .glyphicon {
-      margin: 0 6px; }
-  .summary-container .summary .summary__content h5 {
-    margin-bottom: 4px;
-    font-weight: 400; }
+.summary-container {
+  max-height: 400px;
+  overflow: auto; }
+  .summary-container .summary {
+    padding: 32px; }
+    .summary-container .summary + .summary {
+      margin-top: 8px; }
+    .summary-container .summary ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.85em; }
+    .summary-container .summary .summary__header {
+      margin-bottom: 16px; }
+      .summary-container .summary .summary__header .glyphicon {
+        margin: 0 6px; }
+    .summary-container .summary .summary__content h5 {
+      margin-bottom: 4px;
+      font-weight: 400; }
 
 @media (max-width: 767px) {
   .bundle__summary .bundle__header {
@@ -561,5 +564,4 @@ body {
     transition: .3s ease; }
     .detail.detail--talk:hover {
       color: #4caf50; }
-
 /*# sourceMappingURL=styles.css.map */

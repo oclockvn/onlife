@@ -160,6 +160,9 @@
 }
 
 .summary-container {
+    max-height: $summary_max_h;
+    overflow: auto;
+    
     .summary {
         padding: 32px;
 
@@ -199,7 +202,6 @@
         }
     }
 }
-
 
 .detail {
     display: flex;
