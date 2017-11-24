@@ -1,4 +1,33 @@
-﻿html {
+﻿/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2017 Colophon Foundry
+ *
+ * Licenced to Andrew Butler Astron
+ */
+
+@font-face {
+    font-family: 'visuelt-black';
+    src: url('/fonts/visuelt-black.eot');
+    src: url('/fonts/visuelt-black.eot?#iefix') format('embedded-opentype'), url('/fonts/visuelt-black.woff') format('woff'), url('/fonts/visuelt-black.woff2') format('woff2'), url('/fonts/visuelt-black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'visuelt-regular';
+    src: url('/fonts/visuelt-regular.eot');
+    src: url('/fonts/visuelt-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/visuelt-regular.woff') format('woff'), url('/fonts/visuelt-regular.woff2') format('woff2'), url('/fonts/visuelt-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
     background: none;
     height: auto;
     min-height: 100%;
@@ -28,4 +57,8 @@ body {
     main {
         flex: 1;
     }
+}
+
+html, body {
+    font-family: "visuelt-regular";
 }

@@ -11,6 +11,7 @@
     .bold {
         font-weight: 600;
         font-size: 1.3em;
+        font-family: "visuelt-black";
     }
 
     .bundle-mobile {
@@ -24,7 +25,7 @@
     @include breakpoint(xs) {
         flex-direction: column;
         padding: 0;
-        
+
         .bundle {
             margin: 0 !important;
             flex: 1;
@@ -91,6 +92,13 @@
 
 .bundle__content {
     margin-top: 8px;
+
+    &.auto-height {
+
+        .slimScrollDiv {
+            height: auto !important;
+        }
+    }
     // background: $bundle_header_bgc;
     // padding: 0 16px;
     .item-container {
@@ -162,6 +170,10 @@
 .summary-container {
     max-height: $summary_max_h;
     overflow: auto;
+
+    &.auto-height {
+        height: auto !important;
+    }
     
     .summary {
         padding: 32px;
@@ -267,4 +279,10 @@
             color: $green_color;
         }
     }
+}
+
+.no-bundle {
+    background: $light_300;
+    padding: 31px 32px;
+    font-style: italic;
 }

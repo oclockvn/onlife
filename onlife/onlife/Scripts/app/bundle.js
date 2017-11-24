@@ -139,5 +139,13 @@ function ViewModel() {
         return ko.observableArray(arr);
     }, vm);
 
+    vm.noBundle = ko.pureComputed(function () {
+        var hasItem = _.any(vm.bundles(), function (b) {
+            return b.id() > 0;
+        });
+
+        return !hasItem;
+    }, vm);
+
     ko.applyBindings(vm);
 })();

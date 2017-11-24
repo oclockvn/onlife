@@ -72,6 +72,30 @@
     .button {
       font-size: 1.2em; } }
 
+/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2017 Colophon Foundry
+ *
+ * Licenced to Andrew Butler Astron
+ */
+@font-face {
+  font-family: 'visuelt-black';
+  src: url("/fonts/visuelt-black.eot");
+  src: url("/fonts/visuelt-black.eot?#iefix") format("embedded-opentype"), url("/fonts/visuelt-black.woff") format("woff"), url("/fonts/visuelt-black.woff2") format("woff2"), url("/fonts/visuelt-black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'visuelt-regular';
+  src: url("/fonts/visuelt-regular.eot");
+  src: url("/fonts/visuelt-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/visuelt-regular.woff") format("woff"), url("/fonts/visuelt-regular.woff2") format("woff2"), url("/fonts/visuelt-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 html {
   background: none;
   height: auto;
@@ -104,6 +128,9 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
+
+html, body {
+  font-family: "visuelt-regular"; }
 
 .header {
   padding: 8px 16px;
@@ -377,7 +404,8 @@ body {
     margin-left: 16px; }
   .bundles .bold {
     font-weight: 600;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    font-family: "visuelt-black"; }
   .bundles .bundle-mobile {
     display: none; }
   .bundles img {
@@ -434,6 +462,8 @@ body {
 
 .bundle__content {
   margin-top: 8px; }
+  .bundle__content.auto-height .slimScrollDiv {
+    height: auto !important; }
   .bundle__content .item-container {
     text-transform: uppercase;
     font-weight: 600;
@@ -478,6 +508,8 @@ body {
 .summary-container {
   max-height: 400px;
   overflow: auto; }
+  .summary-container.auto-height {
+    height: auto !important; }
   .summary-container .summary {
     padding: 32px; }
     .summary-container .summary + .summary {
@@ -564,4 +596,10 @@ body {
     transition: .3s ease; }
     .detail.detail--talk:hover {
       color: #4caf50; }
+
+.no-bundle {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 31px 32px;
+  font-style: italic; }
+
 /*# sourceMappingURL=styles.css.map */

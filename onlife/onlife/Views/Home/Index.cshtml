@@ -112,50 +112,52 @@
         
         @Html.Partial("_SummaryHeader")
 
-        <div class="bundle__content">
+        <div class="bundle__content" data-bind="css: { 'auto-height': bundles().length < 4 }">
 
             <header class="flex-container v-center bgc-light-300 p++ mb bold">
                 <img src="~/Content/images/purple-summary-icon.png" alt="build summary" class="mr+" />
                 <span class="text-uppercase">bundle summary</span>
             </header>
 
-            <div class="scrollbar-chrome2">
-                <div class="summary-container scrollbar-chrome2" data-bind="foreach: bundles">
-                    <!-- ko if: id() > 0 -->
-                    <div class="summary bgc-light-300">
-                        <div class="summary__header flex-container v-center">
-                            <span class="flex-container v-center mr+">
-                                <img src="~/Content/images/purple-home-data.png" />
-                                <!-- ko if: includeMobileTalk -->
-                                <span class="mh-">+</span>
-                                <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
-                                <!-- /ko -->
-                            </span>
-                            <span class="bold text-uppercase"><span data-bind="text: name"></span> <span data-bind="if: includeMobileTalk">+ talk</span></span>
-                        </div>
-                        <!-- //header -->
+            <!-- ko if: noBundle -->
+            <div class="no-bundle">select a home or mobile data pack to start</div>
+            <!-- /ko -->
 
-                        <div class="summary__content flex-container">
-                            <div class="flex-item">
-                                <h5 class="text-uppercase">details</h5>
-                                <ul data-bind="foreach: selectedOptions">
-                                    <li>- <span data-bind="text: $data"></span></li>
-                                </ul>
-                            </div>
-                            <div class="flex-item">
-                                <h5 class="text-uppercase">chargers</h5>
-                                <ul>
-                                    <li>$60 upfront (modem)</li>
-                                    <li>%55 minimum month</li>
-                                    <li>$720 12 month minium cost</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- //details -->
-
+            <div class="summary-container" data-bind="foreach: bundles, css: { 'auto-height': bundles().length < 4 }">
+                <!-- ko if: id() > 0 -->
+                <div class="summary bgc-light-300">
+                    <div class="summary__header flex-container v-center">
+                        <span class="flex-container v-center mr+">
+                            <img src="~/Content/images/purple-home-data.png" />
+                            <!-- ko if: includeMobileTalk -->
+                            <span class="mh-">+</span>
+                            <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
+                            <!-- /ko -->
+                        </span>
+                        <span class="bold text-uppercase"><span data-bind="text: name"></span> <span data-bind="if: includeMobileTalk">+ talk</span></span>
                     </div>
-                    <!-- /ko -->
+                    <!-- //header -->
+
+                    <div class="summary__content flex-container">
+                        <div class="flex-item">
+                            <h5 class="text-uppercase">details</h5>
+                            <ul data-bind="foreach: selectedOptions">
+                                <li>- <span data-bind="text: $data"></span></li>
+                            </ul>
+                        </div>
+                        <div class="flex-item">
+                            <h5 class="text-uppercase">chargers</h5>
+                            <ul>
+                                <li>$60 upfront (modem)</li>
+                                <li>%55 minimum month</li>
+                                <li>$720 12 month minium cost</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //details -->
+
                 </div>
+                <!-- /ko -->
             </div>
         </div>
 

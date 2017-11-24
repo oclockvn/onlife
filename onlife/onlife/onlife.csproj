@@ -261,6 +261,16 @@
     <Content Include="Scripts\app\bundle.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\visuelt-black.eot" />
+    <Content Include="fonts\visuelt-black.otf" />
+    <Content Include="fonts\visuelt-black.ttf" />
+    <Content Include="fonts\visuelt-black.woff" />
+    <Content Include="fonts\visuelt-black.woff2" />
+    <Content Include="fonts\visuelt-regular.eot" />
+    <Content Include="fonts\visuelt-regular.otf" />
+    <Content Include="fonts\visuelt-regular.ttf" />
+    <Content Include="fonts\visuelt-regular.woff" />
+    <Content Include="fonts\visuelt-regular.woff2" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
