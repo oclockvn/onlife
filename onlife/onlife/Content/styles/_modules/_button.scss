@@ -10,7 +10,7 @@
     background-color: $button_bgc;
     text-decoration: none;
 
-    &:hover {
+    &:hover, &:active, &:focus {
         text-decoration: none;
     }
 
