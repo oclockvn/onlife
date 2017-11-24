@@ -19,3 +19,112 @@
         </div>
     </div>
 </section>
+
+<section class="bundles">
+    <div class="bundle bundle__build">
+        <div class="bundle__header">           
+            <span class="bundle-icon">
+                <img src="~/Content/images/purple-home-data.png" alt="build bundle" />
+            </span>
+            <div class="bundle__header-text text-uppercase text-center">
+                <div class="text-top">build your bundle</div>
+                <div class="text-bot">select your options below</div>
+            </div>
+        </div>
+        <div class="bundle__content ph+">
+            @for (int i = 0; i < 3; i++)
+            {
+                <div class="item-container">
+                    <div class="item__icon">
+                        <img src="~/Content/images/purple-home-data.png" />
+                    </div>
+                    <div class="item__content bold">home data + talk</div>
+                    <div class="item__price">$80</div>
+                    <div class="item__dropdown">
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- //bundle build -->
+
+    <div class="bundle bundle__summary">
+        <div class="bundle__header">
+            <span class="bundle-icon">
+                <img src="~/Content/images/purple-summary-icon.png" alt="build summary" />
+            </span>
+            <div class="bundle__header-text text-uppercase text-center flex-container">
+                
+                <div class="text-uppercase text-center">
+                    <span class="text-top">
+                        <i class="glyphicon glyphicon-usd"></i>
+                        <span>0</span>
+                    </span>
+                    <div class="text-bot">upfront</div>
+                </div>
+
+                <div class="text-uppercase text-center">
+                    <span class="text-top">
+                        <i class="glyphicon glyphicon-usd"></i>
+                        <span>0</span>
+                    </span>
+                    <div class="text-bot">min pmo</div>
+                </div>
+
+                <div class="text-uppercase text-center">
+                    <span class="text-top">
+                        <i class="glyphicon glyphicon-usd"></i>
+                        <span>0</span>
+                    </span>
+                    <div class="text-bot">min 12 month</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bundle__content">
+
+            <header class="flex-container v-center bgc-light-300 p++ mb bold">
+                <img src="~/Content/images/purple-summary-icon.png" alt="build summary" class="mr+" />
+                <span class="text-uppercase">bundle summary</span>
+            </header>
+
+            <div class="summary-container">
+                @for (int i = 0; i < 2; i++)
+                {
+                    <div class="summary bgc-light-300">
+                        <div class="summary__header flex-container v-center">
+                            <span class="flex-container v-center mr+">
+                                <img src="~/Content/images/purple-home-data.png" />
+                                <i class="glyphicon glyphicon-plus"></i>
+                                <img src="~/Content/images/purple-home-talk-icon.png" />
+                            </span>
+                            <span class="bold text-uppercase">home data + talk</span>
+                        </div>
+                        <div class="summary__content flex-container">
+                            <div class="flex-item">
+                                <h5 class="text-uppercase">details</h5>
+                                <ul>
+                                    <li>100BG data</li>
+                                    <li>50mbps</li>
+                                    <li>Local, national &amp; mobile talk</li>
+                                    <li>Monthly contract</li>
+                                </ul>
+                            </div>
+                            <div class="flex-item">
+                                <h5 class="text-uppercase">chargers</h5>
+                                <ul>
+                                    <li>$60 upfront (modem)</li>
+                                    <li>%55 minimum month</li>
+                                    <li>$720 12 month minium cost</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+    <!-- //bundle summary -->
+</section>
