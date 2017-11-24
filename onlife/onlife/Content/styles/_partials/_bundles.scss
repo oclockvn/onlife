@@ -93,18 +93,26 @@
     margin-top: 8px;
     // background: $bundle_header_bgc;
     // padding: 0 16px;
-
     .item-container {
-        display: flex;
-        align-items: center;
-        padding: 32px 0;
+        //display: flex;
+        //align-items: center;
+        //padding: 32px 0;
         text-transform: uppercase;
         font-weight: 600;
         font-size: 1.2em;
 
+        .item {
+            padding: 24px 0;
+        }
+
         .item__content {
             flex: 1;
-            padding: 0 16px;
+            // padding: 0 16px;
+        }
+
+        .item__icon {
+            display: block;
+            min-width: 40px;
         }
 
         .item__price {
@@ -114,6 +122,19 @@
 
         + .item-container {
             border-top: 1px solid $bundle_item_border;
+        }
+
+        .button-add {
+            border: 1px solid $green_color;
+            background: transparent;
+            color: $green_color;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                background: $green_color;
+                color: #fff;
+            }
         }
     }
 }
@@ -156,5 +177,62 @@
             // margin-top: 8px;
             display: none;
         }
+    }
+}
+
+
+.detail {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    .image {
+        display: block;
+        min-width: 40px;
+    }
+
+    .text {
+        flex: 1;
+        font-weight: 300;
+        font-size: .9em;
+    }
+
+    .action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        a {
+            border: 1px solid $main_color;
+            border-radius: 16px;
+            padding: 2px 8px;
+            font-weight: 300;
+            font-size: 0.7em;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.selected {
+                border: 1px solid $green_color;
+                color: $green_color;
+            }
+
+            + a {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .remove-detail {
+        width: 57px;
+        height: 57px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
     }
 }

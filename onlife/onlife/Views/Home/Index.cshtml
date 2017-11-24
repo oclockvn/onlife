@@ -41,14 +41,76 @@
             @for (int i = 0; i < 3; i++)
             {
                 <div class="item-container">
-                    <div class="item__icon">
-                        <img src="~/Content/images/purple-home-data.png" />
+                    <div class="item flex-container v-center">
+                        <div class="item__icon">
+                            <img src="~/Content/images/purple-home-data.png" />
+                        </div>
+                        <div class="item__content bold">home data + talk</div>
+                        <div class="item__price">$80</div>
+                        <div class="item__dropdown">
+                            <span class="glyphicon glyphicon-menu-down"></span>
+                        </div>
+                        <div class="item__button">
+                            <a class="button button--sm button-add">add</a>
+                        </div>
                     </div>
-                    <div class="item__content bold">home data + talk</div>
-                    <div class="item__price">$80</div>
-                    <div class="item__dropdown">
-                        <span class="glyphicon glyphicon-menu-down"></span>
+                    <!-- //item header -->
+
+                    <div class="item__details">
+
+                        <div class="detail detail--talk">
+                            <span class="image">
+                                <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
+                            </span>
+                            <div class="text">Add mobile talk</div>
+                            <div class="action"></div>
+                        </div>
+                        <!-- //mobile talk -->
+
+                        <div class="detail detail--data">
+                            <span class="image">
+                                <img src="@Url.Content("~/Content/images/purple-mobile-talk-icon.png")" />
+                            </span>
+                            <div class="text">Data</div>
+                            <div class="action">
+                                <a href="#">7gb</a>
+                                <a href="#">10gb</a>
+                            </div>
+                        </div>
+                        <!-- //data -->
+
+                        <div class="detail detail--topup">
+                            <span class="image">
+                                <img src="@Url.Content("~/Content/images/dollar.png")" />
+                            </span>
+                            <div class="text">Topup</div>
+                            <div class="action">
+                                <a href="#">Auto</a>
+                                <a href="#">Manual</a>
+                            </div>
+                        </div>
+                        <!-- //topup -->
+
+                        <div class="detail detail--contract">
+                            <span class="image">
+                                <img src="@Url.Content("~/Content/images/contract.png")" />
+                            </span>
+                            <div class="text">Contract</div>
+                            <div class="action">
+                                <a href="#">12 Months</a>
+                                <a href="#">Monthly</a>
+                            </div>
+                        </div>
+                        <!-- //contract -->
+
+                        <div class="detail detail--remove flex-container h-end v-center p0">
+                            <a href="#" class="remove-detail">
+                                <span class="glyphicon glyphicon-trash tc-red-500"></span>
+                            </a>
+                        </div>
+                        <!-- //remove -->
                     </div>
+                    <!-- //item details -->
                 </div>
             }
         </div>
